@@ -1,0 +1,46 @@
+\renewcommand{\baselinestretch}{1.5}			%Mengubah spasi menjadi 1.5
+\renewcommand{\chaptername}{\large{BAB }}		%Mengubah kata menjadi Bab
+\renewcommand{\figurename}{\textbf{Gambar}}		%Mengubah kata menjadi Gambar
+\renewcommand{\contentsname}{DAFTAR ISI}		%Mengubah kata menjadi Daftar Isi
+\renewcommand{\listfigurename}{DAFTAR GAMBAR}	%Mengubah kata menjadi Daftar Gambar
+\renewcommand{\listtablename}{DAFTAR TABEL}		%Mengubah kata menjadi Daftar Tabel
+\renewcommand{\tablename}{\textbf{Tabel}}		%Mengubah kata menjadi Tabel
+\renewcommand\bibname{DAFTAR PUSTAKA}			%Mengubah kata menjadi Referensi
+\usepackage[left=4cm,top=3cm,right=3cm,bottom=3cm]{geometry}
+\usepackage[font = small]{caption}
+\usepackage{graphicx}			%Library untuk gambar
+\usepackage{fancyhdr}			%Library untuk menggunakan header
+\usepackage{caption}			%Library untuk mengubah caption
+%\usepackage{subcaption}			%Library untuk mengubah subcaption
+\usepackage{subfig}				%Library untuk membuat subfigure (gambar yang berseblahan dan berurutan)
+\usepackage{tocbibind}			%Library untuk menambahkan daftar isi, gambar, dan tabel ke table of contents
+\usepackage{parskip}			%Library untuk menghapus paragraf indent
+\setlength{\parskip}{1em}		%Add space between paragraph
+\usepackage{enumitem}			%Library edit enumerate dan itemize
+\usepackage{titlesec}			%Library edit title spacing
+\usepackage{sectsty}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{amssymb, amsmath} 	% needed for math
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[backend=bibtex,citestyle=authoryear]{biblatex}
+\usepackage{titling}
+\usepackage{blindtext}
+\usepackage{fancyhdr}
+\usepackage{chngcntr}
+%================Mengubah ukuran font pada section, subsection, dll================
+\sectionfont{\normalsize}
+\subsectionfont{\normalsize}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+%========================Mengubah spacing pada awal chapter========================
+\titleformat{\chapter}[display]
+	{\normalfont\large\bfseries\centering}{\chaptertitlename \thechapter \centering}{-10pt}{\large}
+\titlespacing*{\chapter}{0pt}{-30pt}{20pt}
+%==================================================================================

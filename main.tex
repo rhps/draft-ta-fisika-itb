@@ -1,0 +1,199 @@
+\documentclass[12pt,a4paper]{report}
+\renewcommand{\baselinestretch}{1.5}			%Mengubah spasi menjadi 1.5
+\renewcommand{\chaptername}{\large{BAB }}		%Mengubah kata menjadi Bab
+\renewcommand{\figurename}{\textbf{Gambar}}		%Mengubah kata menjadi Gambar
+\renewcommand{\contentsname}{DAFTAR ISI}		%Mengubah kata menjadi Daftar Isi
+\renewcommand{\listfigurename}{DAFTAR GAMBAR}	%Mengubah kata menjadi Daftar Gambar
+\renewcommand{\listtablename}{DAFTAR TABEL}		%Mengubah kata menjadi Daftar Tabel
+\renewcommand{\tablename}{\textbf{Tabel}}		%Mengubah kata menjadi Tabel
+\renewcommand\bibname{DAFTAR PUSTAKA}			%Mengubah kata menjadi Referensi
+\usepackage[left=4cm,top=3cm,right=3cm,bottom=3cm]{geometry}
+\usepackage[font = small]{caption}
+\usepackage{graphicx}			%Library untuk gambar
+\usepackage{fancyhdr}			%Library untuk menggunakan header
+\usepackage{caption}			%Library untuk mengubah caption
+%\usepackage{subcaption}			%Library untuk mengubah subcaption
+\usepackage{subfig}				%Library untuk membuat subfigure (gambar yang berseblahan dan berurutan)
+\usepackage{tocbibind}			%Library untuk menambahkan daftar isi, gambar, dan tabel ke table of contents
+\usepackage{parskip}			%Library untuk menghapus paragraf indent
+\setlength{\parskip}{1em}		%Add space between paragraph
+\usepackage{enumitem}			%Library edit enumerate dan itemize
+\usepackage{titlesec}			%Library edit title spacing
+\usepackage{sectsty}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{amssymb, amsmath} 	% needed for math
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[backend=bibtex,citestyle=authoryear]{biblatex}
+\bibliography{reference}
+%\bibliographystyle{ieeetr}		%Jenis referensi
+%================Mengubah ukuran font pada section, subsection, dll================
+\sectionfont{\normalsize}
+\subsectionfont{\normalsize}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+%========================Mengubah spacing pada awal chapter========================
+\titleformat{\chapter}[display]
+	{\normalfont\large\bfseries\centering}{\chaptertitlename \thechapter \centering}{-10pt}{\large}
+\titlespacing*{\chapter}{0pt}{-30pt}{20pt}
+%==================================================================================
+
+\begin{document}
+\begin{titlepage}
+	\centering
+	{\textbf{RANCANG BANGUN SISTEM PENDETEKSI GAS ETILEN UNTUK MENENTUKAN TINGKAT KEMATANGAN BUAH MANGGA}}
+	
+	\vspace{2cm}
+	\textbf{Tugas Akhir} \\
+	Diajukan sebagai salah satu syarat untuk memperoleh gelar Sarjana Fisika dari Institut Teknologi Bandung
+	
+	\vspace{1cm}
+	\textbf{Oleh: \\
+	Moch Adha Agary Andi Paso \\
+	10213040}
+	
+	\vspace{1cm}
+	\begin{figure}[!htbp]
+		\centering
+		\includegraphics[width=3.5cm]{resources/itb_logo.png}
+		\label{cover}
+	\end{figure}
+		
+	\vspace{2cm}
+	{\textbf{PROGRAM STUDI FISIKA \\
+	FAKULTAS MATEMATIKA \& ILMU PENGETAHUAN ALAM \\
+	INSTITUT TEKNOLOGI BANDUNG \\
+	2017 \\}}
+\end{titlepage}
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+\chapter*{\centering ABSTRAK}
+
+\addcontentsline{toc}{chapter}{ABSTRAK}
+
+\chapter*{\centering ABSTRACT}
+
+\addcontentsline{toc}{chapter}{ABSTRACT}
+
+\chapter*{\centering LEMBAR PENGESAHAN}
+
+\chapter*{\centering PEDOMAN PENGGUNAAN}
+
+\chapter*{\centering KATA PENGANTAR}
+
+\addcontentsline{toc}{chapter}{KATA PENGANTAR}
+
+\normalsize {\tableofcontents}
+\normalsize {\listoffigures}
+\normalsize {\listoftables}
+
+\chapter{PENDAHULUAN}
+\setcounter{page}{8}				%Mulai page numbering pada halaman 8
+\pagenumbering{arabic}
+	\section{Latar Belakang}
+		
+	\section{Rumusan Masalah}
+		
+	\section{Tujuan Penelitian}
+		
+	\section{Batasan Masalah}
+		
+	\section{Manfaat Penelitian}
+	
+	\section{Sistematika Penulisan}
+	
+\chapter{KAJIAN PUSTAKA}
+	\section{Buah}
+	
+	\section{Etilen}
+	
+	\section{\textit{Infrared Radiation}}
+	%Format Tabel
+	\begin{table}[!htbp]
+		\small
+		\centering
+		\caption{Pembagian Jenis Radiasi Infrared.}
+		\label{tabel1}
+		\begin{tabular}{|p{5.0cm}|p{2cm}|p{3.5cm}|}
+		\hline
+		\textbf{Description }	& \textbf{CIE }	& \textbf{Wavelength ($\mu m$)} \\
+		\hline
+		Near-Infrared				& IR-A	& 0.7  - 1.4 $\mu m$\\
+		Near-Infrared				& IR-B	& 1.4  - 3 $\mu m$ \\
+		Mid-wavelength Infrared		& IR-C	& 3 - 8 $\mu m$ \\
+		Long-wavelength Infrared	& IR-C	& 8 - 15 $\mu m$ \\
+		Far Infrared				& IR-C	& 15 - 1000 $\mu m$ \\
+		\hline
+		\end{tabular}
+	\end{table}
+	\vspace{-0.5cm}
+	\subsection{Infrared Spectroscopy}
+			
+	\subsection{Frekuensi Vibrasi Molekul}
+	%Format persamaaan
+	\begin{equation}
+		F = ma
+		\label{newton}
+	\end{equation}\\
+		
+	\section{Reflektansi, Absorbansi, dan Transmitansi}
+		
+	\subsection{Reflektansi}
+		
+	\subsection{Absorbansi}
+		
+	\subsection{Transmitansi}
+		
+	\section{\textit{Thermal Radiation Detector}}
+		
+\chapter{RANCANGAN SISTEM DAN EKSPERIMEN}
+	\section{Desain Secara Umum}
+			
+	\section{Skema Deteksi Gas}
+		
+	\section{Desain Perangkat Keras}
+	Bagian ini menjelaskan mengenai implementasi rangkaian secara terintegrasi mulai dari interface sensor thermopile sampai amplifier yang digunakan.
+
+	Perujukan literatur dapat dilakukan dengan menambahkan entri baru di berkas. Tulisan ini merujuk pada \parencite{knuth2001art}
+		
+	\subsection{Blok Sensor}
+		
+	\subsection{Blok Amplifier}
+			
+	\subsection{Blok Source}
+			
+	\subsection{Blok Power}
+			
+	\section{Rancangan Eksperimen}
+		
+	\subsection{Penentuan Tegangan Optimum Kipas}
+		
+	\subsection{Penentuan Tegangan Referensi}
+			
+\chapter{HASIL DAN PEMBAHASAN}
+	\section{Hasil}
+	\subsection{Pengukuran Tegangan pada Kipas terhadap Sinyal yang Dihasilkan}
+		
+	\subsection{Pengukuran Pengaruh Berbagai Kematangan Buah terhadap Sinyal yang Dihasilkan}
+		
+	\section{Pembahasan}
+	\subsection{Penentuan Tegangan Optimum}
+		
+	\subsection{Penentuan Tegangan Referensi}
+		
+\chapter{KESIMPULAN DAN SARAN}
+	\section{Kesimpulan}
+	\section{Saran}
+
+\printbibliography
+\chapter*{\centering LAMPIRAN}
+\addcontentsline{toc}{chapter}{LAMPIRAN}
+
+\end{document}

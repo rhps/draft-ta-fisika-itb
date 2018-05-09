@@ -1,0 +1,53 @@
+%
+% Draft TA Fisika ITB
+% author Rio Harapan Pangihutan
+% 10213033
+% Bagian utama dari TA, berisi index dari setiap komponen lainnya
+%
+
+\documentclass[12pt,a4paper, onecolumn, oneside, final]{report}
+
+\input{resources/config.sty}
+
+\makeatletter
+
+\makeatother
+
+\bibliography{references}
+
+\begin{document}
+	\title{Cell Counting with Image Processing and Machine Learning}
+	\date{}
+	\author{
+		Rio Harapan Pangihutan\\
+		10213033
+	}
+	
+	
+	\input{chapters/01cover}
+
+	\setcounter{page}{1}
+	\pagenumbering{roman}
+
+	\input{chapters/02abstract-id}
+	\input{chapters/03abstract-en}
+	\input{chapters/04lembarpengesahan}
+	\input{chapters/05pedomanpenggunaan}
+	\input{chapters/06katapengantar}
+	\input{chapters/06adaftarisi}
+	\newpage
+
+
+	\pagenumbering{arabic}
+	\setcounter{page}{10}
+	\input{chapters/07chapter01pendahuluan}
+	\input{chapters/08chapter02tinjauanpustaka}
+	\input{chapters/09chapter03analisisdanperancangan}
+	\input{chapters/10chapter04hasildanpembahasan}
+	\input{chapters/11chapter05kesimpulandansaran}
+
+\printbibliography
+\chapter*{\centering LAMPIRAN}
+\addcontentsline{toc}{chapter}{LAMPIRAN}
+
+\end{document}

@@ -1,0 +1,11 @@
+rm -rf *.aux
+rm -rf *.bbl
+rm -rf *.blg
+rm -rf *.lof
+rm -rf *.log
+rm -rf *.lot
+rm -rf *.out
+rm -rf *.xml
+rm -rf *.gz
+rm -rf *-blx.bib
+rm -rf *.toc
